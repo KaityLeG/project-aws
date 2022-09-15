@@ -13,13 +13,13 @@ Resources:
       GroupName:
         SecurityGroupIngress:
         - IpProtocol: tcp
-        FromPort: 80
-        ToPort: 80
-        CiderIp: 0.0.0.0/0
+          FromPort: 80
+          ToPort: 80
+          CiderIp: 0.0.0.0/0
         - IpProtocol: tcp
-        FromPort: 22
-        ToPort: 22
-        CiderIp: 0.0.0.0/0
+          FromPort: 22
+          ToPort: 22
+          CiderIp: 0.0.0.0/0
 
   WebServerInstance:
     Type: AWS::EC2::Instance

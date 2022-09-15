@@ -8,7 +8,7 @@ Description: |
   
 Resources:
   WebServerSecurityGroups:
-    Type:AWS::EC2::SecurityGroup
+    Type: AWS::EC2::SecurityGroup
     Properties:
       GroupName:
         SecurityGroupIngress:
@@ -52,7 +52,7 @@ Resources:
   
 Outputs:
   WebsiteURL:
-    Value:
-    - !Sub ${PublicAddress}
-    - PublicAddress: !GetAtt WebServerInstance.DnsName
+    Value: !Sub
+    - http://${PublicAddress}
+    - PublicAddress: !GetAtt WebServerInstance.PublicDnsName
     Description: Kittens Carousel Application URL
